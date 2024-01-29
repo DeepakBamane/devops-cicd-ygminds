@@ -11,7 +11,7 @@ public class DevopsIntegrationApplication {
 
 	@GetMapping
 	public String message(){
-		return "This is my Second Project";
+		return "This project is for creating EKS Cluster using terraform";
 	}
 
 	public static void main(String[] args) {
