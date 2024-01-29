@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build Maven'){
             steps{
-                git 'https://github.com/DeepakBamane/devops-cicd-ygminds.git'
+                git 'https://github.com/DeepakBamane/eks-cluster-assignment-cicd.git'
                 sh 'mvn clean install'
             }
         }
@@ -31,7 +31,7 @@ pipeline {
         stage('EKS and Kubectl configuration'){
             steps{
                 script{
-                    sh 'aws eks update-kubeconfig --region us-east-2 --name deepak-cluster'
+                    sh 'aws eks update-kubeconfig --region us-west-1 --name deepak-cluster'
                 }
             }
         }
